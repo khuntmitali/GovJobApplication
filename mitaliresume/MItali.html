@@ -1,0 +1,286 @@
+@model RegistrationModel
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>radhe mobile</title>
+
+    <style>
+
+  
+    body{
+         background-image: url("phone 1.jpeg");
+    }
+    .datepicker {
+            width: 100px;
+        }
+    .container-fluid
+    {
+     position: relative;
+     min-width: 20px;
+     min-height: 20px;
+     display: flex;
+     overflow: hidden;
+     display flex:center;
+     align-items: center;
+     justify-content: center;
+     backdrop-filter: blur(5px);
+     color: lightgoldenrodyellow;
+     text-shadow: 2px 2px 5px darkgoldenrod ;
+     font-style: oblique;
+     box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+      
+     background-size: cover;
+     background position:center ;
+     border: 1px solid rgba(255, 255, 255, 0.5);
+     border-radius: -45px;
+     border-right:1px solid  rgba(255, 255, 255, 0.2);
+     border-bottom:1px solid  rgba(255, 255, 255, 0.2);
+}
+.container-fluid
+.nav-link-active-1{
+    color: orangered;
+}
+.nav-link-active-2{
+    color: orangered;
+}
+.nav-link-active-3{
+    color: orangered;
+}
+.nav-link-active-4{
+    color: orangered;
+}
+.nav-link-active-5{
+    color: orangered;
+}
+.nav-link-active-6{
+    color: orangered;
+}
+
+.phone img{
+    width: 50px;
+    animation: phone 7s linear infinite;
+}
+.phone{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -70px;
+
+}
+@keyframes phone{
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-80vh);
+        opacity: 0;
+    }
+}
+.phone img:nth-child(1){
+    animation-delay: 2s;
+}
+.phone img:nth-child(2){
+    animation-delay: 1s;
+}
+
+.phone img:nth-child(3){
+    animation-delay: 3s;
+}
+
+.phone img:nth-child(4){
+    animation-delay: 4.5s;
+}
+
+.phone img:nth-child(5){
+    animation-delay: 3s;
+}
+
+.phone img:nth-child(6){
+    animation-delay: 6s;
+}
+
+
+
+.phone img:nth-child(7){
+    animation-delay: 7s;
+}
+
+.form .inputbox{
+     width: 100%;
+     height: 100%;
+     margin-top: 20px;
+ }
+ .form .inputbox input{
+     width: 100%;
+     height: 100%;
+     padding: 10px 20px; 
+     border: none;
+     outline: none;
+     border: 1px solid rgba(255, 255, 255, 0.5);
+     border-radius: 30px;
+     border-right:1px solid  rgba(255, 255, 255, 0.2);
+     border-bottom:1px solid  rgba(255, 255, 255, 0.2);
+     font-size: 15px;
+     letter-spacing: 1px;
+     color: #666;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+ }
+ .form .inputbox select {
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: #666;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.form .inputbox number {
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: #666;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+ .form .inputbox input::placeholder{
+     color: #666
+
+ }
+
+ .form .inputbox input[type="submit"]{
+     color: #666;
+     background: #fff;
+     max-width: 100px;
+     cursor: pointer;
+     margin-bottom: 20px;
+     font-weight: 600;
+ }
+
+</style>
+<script>
+    $(function() {
+        $("#birthdate").datepicker();
+    });
+</script>
+</head>
+<body>
+    
+    
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <section>
+      <div class="container-fluid">
+        <div class ="box">
+         <div class="py-5">
+      <div id="services-overview"class="py-5"  block block-1 full-page>
+        <h1>Registration page</h1>
+        </div>
+        <div class="form">
+        <form action="registration_process.php" method="POST">
+            <!-- <label for="username">Username:</label> -->
+            <div class="inputbox">
+            <input type="text" id="FirstName" name="FirstName" required placeholder="FirstName"><br><br>
+            </div>
+            <div class="inputbox">
+                <input type="text" id="LastName" name="LastName" required placeholder="LastName"><br><br>
+                </div>
+            <div class="inputbox">
+            <input type="email" id="email" name="email" required placeholder="Email Id"><br><br>
+            </div>
+            <div class="inputbox">
+            <input type=" mobile number" id="mobile number" name="mobile number" required placeholder="Mobile Number"><br><br>
+            </div>
+            <div class="inputbox">
+            <input type="Address" id="Address" name="Address" required placeholder="Address"><br><br>
+            </div>
+            <div class="inputbox">
+            <input type="password" id="password" name="password" required placeholder="Password"><br><br>
+            </div>
+            <div class="inputbox">
+            <input type="password" id="confirm-password" name="confirm_password" required placeholder="confirm_password"><br><br>
+            </div> 
+            <!-- <div class="inputbox">
+            <select id="city" name="city" placeholder="city">
+                <option value = "Select City" >Select City</option>
+                <option value="Rajkot">Rajkot</option>
+                <option value="Ahemdabad">Ahemdabad</option>
+                <option value="Vadodara">Vadodara</option>
+             
+            </select><br><br>
+
+            </div> -->
+            <div class="inputbox">
+            <select id="education" name="education" placeholder="education">
+                <option value = "Select Education" >Select Education</option>
+                <option value="Secondary School">10th</option>
+                <option value="High School">12th</option>
+                <option value="ITI">ITI</option>
+                <option value="Bachelor's Degree">Collage</option>
+                <option value="Master's Degree">Masters</option>
+                <!-- Add more education options as needed -->
+            </select><br><br>
+            </div>
+            <div class="inputbox">
+            <input type="number" id="experience" name="experience" required placeholder="experience(in Years)"><br><br>
+        </div>
+        <div class="inputbox">
+            <input type="text" id="birthdate" name="birthdate" required placeholder="birthdate"><br><br>
+        </div>
+        <div class="inputbox">
+  
+            <input type="submit" value="Register">
+            </div>
+        </form>
+        </div>
+    </div>
+        
+    <!-- Initialize the datepicker -->
+   
+ 
+    </video>
+   </div>
+   </div>
+   
+   </section>
+</div>
+<div class="phone">
+    <img src="phone.jpeg">
+     <img src="phone.jpeg">
+      <img src="phone.jpeg">
+       <img src="phone.jpeg">
+         <img src="phone.jpeg">
+          <img src="phone.jpeg">
+        
+     </div>
+ </div>
+ </section>
+</body>
+</html>
